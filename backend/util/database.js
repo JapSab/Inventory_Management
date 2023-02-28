@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
+const dotenv = require('dotenv').config()
 
-const sequelize = new Sequelize('inventory-management', 'jafara', 'jafara212', {
+
+const sequelize = new Sequelize('inventory-management', process.env.dbUser, process.env.dbPassword, {
     host: 'localhost',
     dialect: 'postgres'
 });

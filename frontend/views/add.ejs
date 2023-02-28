@@ -1,0 +1,33 @@
+<html>
+    <header>
+    <link rel="stylesheet" href="form.css">
+
+    </header>
+<body>
+
+    <main>
+        <form class="add-form" action="/add" method="POST">
+            <div class="form-control">
+                <label for="itemName">ნივთის სახელი</label>
+                <input type="text" name="itemName" id="itemName" required>
+            </div>
+            <div class="form-control">
+                <label for="itemLocation">ნივთის ადგილმდებარეობა</label>
+                <select name="selectedLocation" required>
+                    <option value="ყველა">ყველა</option>
+                    <option value="მთავარი ოფისი">მთავარი ოფისი</option>
+                    <option value="კავეა გალერეა">კავეა გალერეა</option>
+                    <option value="კავეა თბილისი მოლი">კავეა თბილისი მოლი</option>
+                    <option value="კავეა ისთ ფოინთი">კავეა ისთ ფოინთი</option>
+                    <option value="კავეა სითი მოლი">კავეა სითი მოლი</option>
+                  </select>
+            </div>
+            <div class="form-control">
+                <label for="price">ფასი (ლარებში)</label>
+                <input type="number" name="itemPrice" id="itemPrice" required>
+            </div>
+            <button class="btn" type="submit">დამატება</button>
+        </form>
+    </main>
+
+    </html>

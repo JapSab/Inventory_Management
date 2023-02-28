@@ -6,20 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
 </head>
 <body>
     
+  <a href="/add" class="button">დამატება</a>
+  <br>
+  <br>
 <table>
-    <thead>
-    
+  <thead>
+    <tr>
+      <th>ნივთის სახელი</th>
+      <th>
+        ნივთის ადგილმდებარეობა
+        <select>
+          <option value="ყველა">ყველა</option>
+          <option value="მთავარი ოფისი">მთავარი ოფისი</option>
+          <option value="კავეა გალერეა">კავეა გალერეა</option>
+          <option value="კავეა თბილისი მოლი">კავეა თბილისი მოლი</option>
+          <option value="კავეა ისთ ფოინთი">კავეა ისთ ფოინთი</option>
+          <option value="კავეა სითი მოლი">კავეა სითი მოლი</option>
+        </select>
+      <th>ფასი (ლარებში)</th>
+      <th>ოპერაციები</th>
+    </tr>
+  </thead>
+    <tbody>
+    <% for (let item of items) { %>
+      
       <tr>
-        <td>Item A</td>
-        <td>Location A</td>
-        <td>20 GEL</td>
+        <td> <%= item.itemName %></td>
+        <td><%= item.selectedLocation %></td>
+        <td><%= item.itemPrice %></td>
         <td>
-          <button>Delete</button>
+          <button>წაშლა</button>
         </td>
       </tr>
+        <% } %>
+
     </tbody>
   </table>
   

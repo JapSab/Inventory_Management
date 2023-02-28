@@ -16,13 +16,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'frontend', 'public')));
 
 const tableRoutes = require('./backend/routes/table');
+const addRoutes = require('./backend/routes/add');
+
 
 
 
 app.use(tableRoutes);
-
+app.use(addRoutes)
 sequelize
-  .authenticate()
+  .sync()
   .then(() => {
     app.listen(3000);
   })

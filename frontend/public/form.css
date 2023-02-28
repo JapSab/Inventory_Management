@@ -1,0 +1,68 @@
+/* Set some global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  /* Style the form */
+  .add-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    margin-right: 6px;
+    cursor: pointer;
+  }
+  
+  select:hover {
+    background-color: #e6e6e6;
+  }
+  
