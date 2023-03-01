@@ -19,7 +19,7 @@
       <th>ნივთის სახელი</th>
       <th>
         ნივთის ადგილმდებარეობა
-        <select>
+        <select id="list" onchange="">
           <option value="ყველა">ყველა</option>
           <option value="მთავარი ოფისი">მთავარი ოფისი</option>
           <option value="კავეა გალერეა">კავეა გალერეა</option>
@@ -39,7 +39,10 @@
         <td><%= item.selectedLocation %></td>
         <td><%= item.itemPrice %></td>
         <td>
-          <button>წაშლა</button>
+          <form action="/inventories/<%= item.id %>?_method=DELETE" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit">Delete</button>
+          </form>
         </td>
       </tr>
         <% } %>
@@ -47,5 +50,7 @@
     </tbody>
   </table>
   
+
+
 </body>
 </html>

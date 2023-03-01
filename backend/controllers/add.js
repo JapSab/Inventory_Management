@@ -6,7 +6,7 @@ const Item = require('../models/items');
 exports.getAdd = (req, res, next) => {
     
     res.render('add', {
-        path: '/add'
+        // path: '/add'
 
     });
 }
@@ -22,7 +22,10 @@ exports.postAdd = (req, res, next) => {
         selectedLocation: selectedLocation,
         itemPrice: itemPrice
     })
-    .then(result => console.log(result))
+    .then( result => {
+        console.log('Item added successfully')
+        res.redirect('/inventories');
+    })
     .catch(err => console.log(err));
 
 }
